@@ -49,7 +49,8 @@ describe('Check Links', () => {
     checkIMGTags();
     // Then check each Lab
     cy.get('#mySidenav li').then(el => { 
-      // the UI refreshes the view, so we need to go by the item number in the list.
+      // the UI refreshes the view, so we need to go by the lab index in the list.
+      // and do a new look up each time
       const navCount = el.length; 
       cy.log(navCount);
       for (let i = 1; i <= navCount; i++) {
