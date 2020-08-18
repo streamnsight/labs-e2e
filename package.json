@@ -1,0 +1,19 @@
+{
+  "name": "labs-e2e",
+  "version": "1.0.0",
+  "description": "End-to-end testing for labs",
+  "main": "index.js",
+  "repository": "git@github.com:streamnsight/labs-e2e.git",
+  "author": "Emmanuel Leroy <emmanuel.leroy@oracle.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "13.8.0"
+  },
+  "devDependencies": {
+    "cypress": "^4.12.1"
+  },
+  "scripts": {
+    "open": "CYPRESS_BASE_URL='https://streamnsight.github.io/learning-library/developer-library/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/' ./node_modules/cypress/bin/cypress open ./integrations/link_check.specs.js",
+    "test": "CYPRESS_BASE_URL='https://streamnsight.github.io/learning-library/developer-library/weblogic-to-oci/workshops/weblogic-on-oci-mp/freetier/' ./node_modules/cypress/bin/cypress run ./integrations/link_check.specs.js"
+  }
+}
